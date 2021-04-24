@@ -39,11 +39,7 @@ namespace Knab.Framework.Core.Domain
 
         public override int GetHashCode() => Id.GetHashCode();
 
-        public static int AbsoluteDifference(Enumeration firstValue, Enumeration secondValue)
-        {
-            var absoluteDifference = Math.Abs(firstValue.Id - secondValue.Id);
-            return absoluteDifference;
-        }
+   
 
         public static T FromValue<T>(int value) where T : Enumeration
         {

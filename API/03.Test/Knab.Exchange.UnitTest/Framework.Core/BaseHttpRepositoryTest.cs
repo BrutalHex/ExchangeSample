@@ -8,7 +8,7 @@ namespace Knab.Exchange.UnitTest.Framework.Core
 {
     public class BaseHttpRepositoryTest
     {
-
+      
 
 
         [Fact(DisplayName = "Is HandleJsonSettings returns settings")]

@@ -37,8 +37,4 @@
 	<ProjectReference Include="..\..\02.Services\KnabExchange\Knab.Exchange.Endpoint\Knab.Exchange.Endpoint.csproj" />
 	</ItemGroup>
 
-	<ItemGroup>
-	  <Folder Include="Framework.Core\" />
-	</ItemGroup>
-
 </Project>

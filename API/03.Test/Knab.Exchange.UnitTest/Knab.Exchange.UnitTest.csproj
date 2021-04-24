@@ -20,6 +20,6 @@
 	<ItemGroup>
 		<ProjectReference Include="..\..\01.Framework\Knab.Framework.Core\Knab.Framework.Core.csproj" />
 		<ProjectReference Include="..\..\02.Services\KnabExchange\Knab.Exchange.Domain\Knab.Exchange.Domain.csproj" />
-		
+		<ProjectReference Include="..\..\02.Services\KnabExchange\Knab.Exchange.Application\Knab.Exchange.Application.csproj" />
 	</ItemGroup>
 </Project>
