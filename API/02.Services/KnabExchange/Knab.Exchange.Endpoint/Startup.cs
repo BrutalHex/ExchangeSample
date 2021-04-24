@@ -3,6 +3,7 @@ using Knab.Exchange.ApplicationContract.WebRepository;
 using Knab.Exchange.Endpoint.Configs;
 using Knab.Exchange.Endpoint.Grpc.Map;
 using Knab.Exchange.Endpoint.Grpc.services;
+using Knab.Framework.Core.Middlewares;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
@@ -27,7 +28,8 @@ namespace Knab.Exchange.Endpoint
             services.Configure<KestrelServerOptions>(Configuration.GetSection("Kestrel"));
             services.AddSetting(Configuration);
             services.AddHttpClient<IWebExchangeRepository, WebExchangeRepository>();
-         
+
+           
             services.AddControllers();
             services.AddAutoMapper(typeof(ExchangeConvertorProfile));
             services.AddGrpc();
@@ -44,7 +46,7 @@ namespace Knab.Exchange.Endpoint
             app.UseRouting();
 
             app.UseAuthorization();
-
+            app.UseMiddleware<CorsMiddleware>();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
