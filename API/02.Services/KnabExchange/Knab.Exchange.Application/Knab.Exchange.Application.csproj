@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+	</PropertyGroup>
+	
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\01.Framework\Knab.Framework.Core\Knab.Framework.Core.csproj" />
+		<ProjectReference Include="..\Knab.Exchange.ApplicationContract\Knab.Exchange.ApplicationContract.csproj" />
+		<ProjectReference Include="..\Knab.Exchange.Domain\Knab.Exchange.Domain.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+
+		
+	</ItemGroup>
+</Project>

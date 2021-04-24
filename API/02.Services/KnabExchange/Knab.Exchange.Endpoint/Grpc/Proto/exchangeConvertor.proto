@@ -1,0 +1,27 @@
+﻿
+syntax = "proto3";
+option csharp_namespace = "Knab.Exchange.Endpoint.Grpc";
+package KnabExchange;
+
+service ExchangeConvertor {
+rpc Get(  ConvertRequest) returns ( ConvertResponse);
+
+}
+
+message ConvertRequest {
+string crypto=1;
+
+} 
+message KeyPairDouble
+{
+string key=1;
+double value=2;
+}
+
+message   ConvertResponse {
+
+string baseCurrency=1;
+repeated KeyPairDouble  Rates=2;
+string message=3;
+
+}
