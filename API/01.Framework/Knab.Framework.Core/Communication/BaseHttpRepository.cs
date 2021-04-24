@@ -75,7 +75,7 @@ namespace Knab.Framework.Core.Domain.Communication
         /// </summary>
         /// <param name="settings"></param>
         /// <returns></returns>
-        private JsonSerializerSettings HandleJsonSettings(JsonSerializerSettings settings)
+        public JsonSerializerSettings HandleJsonSettings(JsonSerializerSettings settings)
         {
             var defaultSetting= new JsonSerializerSettings
                 {
@@ -94,7 +94,7 @@ namespace Knab.Framework.Core.Domain.Communication
         /// <returns>
         /// a string that represents queryString to be used in URL
         /// </returns>
-        private string BuildQueryString(Dictionary<string, string> queryString)
+        public string BuildQueryString(Dictionary<string, string> queryString)
         {
             if (queryString == null || queryString.Count == 0)
                 return string.Empty;
