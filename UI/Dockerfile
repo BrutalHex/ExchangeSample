@@ -19,6 +19,5 @@ RUN npm install --silent
 
 # add app  
 COPY . ./  
-#RUN echo -e '/* eslint-disable camelcase */ \nexport  const REACT_APP_Host_API:string="http://$hostingvar:5001/api/";' > ./src/base/environments.ts
 # will start app  
 CMD ["npm", "start"] 

@@ -21,6 +21,7 @@ namespace Knab.Exchange.Endpoint
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+                  
                 });
     }
 }

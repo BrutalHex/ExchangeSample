@@ -52,6 +52,7 @@ namespace Knab.Exchange.Endpoint
                 endpoints.MapControllers();
                 endpoints.MapGrpcService<ExchangeConvertorService>();
             });
+           
         }
     }
 }

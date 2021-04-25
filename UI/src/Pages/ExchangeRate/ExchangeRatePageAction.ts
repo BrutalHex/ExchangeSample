@@ -13,7 +13,11 @@ import axios from 'axios';
 
 export function SendCode(code: string): ExchangeThunkResult<void> {
   return (dispatch: ExchangeThunkDispatch) => {
-    dispatch(creatAction(Spinner_Change, false));
+    dispatch(creatAction(Spinner_Change, true));
+
+    if (code == null || code.length === 0) {
+      code = 'btc';
+    }
 
     const fetchUrl = `${Setting.getApiUrl('ExchangeRate/get')}/${code}`;
 
@@ -21,11 +25,10 @@ export function SendCode(code: string): ExchangeThunkResult<void> {
       method: 'get',
       url: fetchUrl,
     }).then(function (response: any) {
-      debugger;
       const result = new ExchangeRate();
       result.baseCurrency = response.data.baseCurrency;
       result.rates = response.data.rates;
-      dispatch(creatAction(Spinner_Change, true));
+      dispatch(creatAction(Spinner_Change, false));
       dispatch(creatAction(Exchange_Rate, result));
     });
   };

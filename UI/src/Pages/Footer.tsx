@@ -4,11 +4,9 @@ import React, { Component } from 'react';
 class Footer extends React.Component {
   render() {
     return (
-      <div className="row">
-        <div className="col-12 footer-copy-right text-center">
-          © 2021 Knab Exchange. All Rights reserved.
-        </div>
-      </div>
+      <footer className="footer row w-100">
+        <div className="col-12 text-center">© 2021 Knab Exchange. All Rights reserved.</div>
+      </footer>
     );
   }
 }
