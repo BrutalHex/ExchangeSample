@@ -1,4 +1,7 @@
-﻿import React, { Component, FunctionComponent } from 'react';
+﻿/* eslint-disable no-useless-rename */
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
+import React, { Component, FunctionComponent } from 'react';
 import { Route } from 'react-router-dom';
 import '../Pages/style/main.scss';
 import Footer from '../Pages/Footer';

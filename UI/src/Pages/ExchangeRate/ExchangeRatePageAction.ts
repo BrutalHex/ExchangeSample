@@ -1,3 +1,5 @@
+/* eslint-disable no-debugger */
+/* eslint-disable camelcase */
 'use strict';
 
 import { Setting } from '../../base/settings';
@@ -13,14 +15,14 @@ export function SendCode(code: string): ExchangeThunkResult<void> {
   return (dispatch: ExchangeThunkDispatch) => {
     dispatch(creatAction(Spinner_Change, false));
 
-    let fetchUrl = `${Setting.getApiUrl('ExchangeRate/get')}/${code}`;
+    const fetchUrl = `${Setting.getApiUrl('ExchangeRate/get')}/${code}`;
 
     axios({
       method: 'get',
       url: fetchUrl,
     }).then(function (response: any) {
       debugger;
-      let result = new ExchangeRate();
+      const result = new ExchangeRate();
       result.baseCurrency = response.data.baseCurrency;
       result.rates = response.data.rates;
       dispatch(creatAction(Spinner_Change, true));

@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import { IGeneralAction } from './IGeneralAction';
 import ExchangeRate from '../Pages/ExchangeRate/ExchangeRate';
 

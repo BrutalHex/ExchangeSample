@@ -19,7 +19,8 @@
     "noEmit": true,
     "rootDir": "src",
     "outDir": "build",
-    "jsx": "react"
+    "jsx": "react-jsx",
+    "noFallthroughCasesInSwitch": true
   },
   "include": [
     "src"

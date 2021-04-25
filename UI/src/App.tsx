@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
+import {   Route, Redirect, Switch } from 'react-router-dom';
 
 /** Layouts **/
 import SharedLayout from './Layout/SharedLayout';
@@ -15,7 +15,6 @@ function App() {
         <Route exact path="/">
           <Redirect to="/rates" />
         </Route>
-
         <Route path={['/rates']}>
           <DashboardLayoutRoute>
             <Switch>

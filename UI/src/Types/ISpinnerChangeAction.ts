@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import { IGeneralAction } from './IGeneralAction';
 
 export const Spinner_Change = 'Spinner_Change';

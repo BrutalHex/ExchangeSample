@@ -13,7 +13,7 @@ const ExchangeRatePage: FunctionComponent<ExchangeRatePageProps> = (
     baseCurrency: yup.string().trim().required('base crypto currency is required'),
   });
 
-  let ratesPreview = [<div>no results</div>];
+  let ratesPreview = [<div key="thisisempty2332">no results</div>];
 
   if (props.ratesResult != null && props.ratesResult.rates != null) {
     ratesPreview = Object.keys(props.ratesResult.rates).map((property: any, index: number) => {
